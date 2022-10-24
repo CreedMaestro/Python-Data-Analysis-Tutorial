@@ -38,10 +38,10 @@ l = 'a'
 m = 'b'
 print(l+m)
 print(l-m)
-print(l*m) #문자형끼리 곱셈은 안되지만,
+#print(l*m)  #문자형끼리 곱셈은 안되지만,
 print(l*10) #문자형에 숫자를 곱하면 표현이 된다.
 
-n = '100'  # 세자리 숫자. 
+n = '100'     # 세자리 숫자. 
 print(len(n)) # 숫자의 문자수를 표현 length.
 
 o = 'hello python!'
@@ -51,5 +51,21 @@ print(o[0:])  # 처음부터 끝까지 지정
 print(o[:])   # 처음부터 끝까지 지정
 
 p = "Titanics James"  # 문장에서 slicing으로 제목과 감독을 추출
-Title = print(p[0:7])
+Title = print(p[:7])
 Director = print(p[9:])
+
+q = ['a', 'b', 'c', 'd', 'e'] #리스트
+r = ['a', 'b', ['c', 'd', 'e']]
+print(q[3])
+print(r[2]) # 0,1,2, []로 'c,d,e'를 가져옴
+print(r[2][1]) # 2번째의 1첫번째 [c,d,e]에서 [d]를 추출
+
+s = ('a', 'a', 'a', 'b')  #소괄호 안에 있으면 Tuple. 현업에서 거의 안 씀
+print(type(s))
+
+t = {'key1' : 'value1', 'key2' : 'value2'}  #딕셔너리형
+print(t['key2'])  # 밸류를 가져오기 위해 key값 입력
+
+u = set([1, 1, 1, 2])  #set형  중복 제외 추출. 
+print(type(u))
+print(u)
